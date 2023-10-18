@@ -22,12 +22,7 @@ def test_skeleton_main_yaml_file_missing():
     This passes a yaml filename that is known not to exist
     """
     arg1 = Path("test_files") / "bad_yaml_filename.yaml"
-    arg2 = (
-        Path("S:/")
-        / "NOAA Ecosystem Project"
-        / "UFS2ARCO"
-        / "bfg_1994010100_fhr03_control"
-    )
+    arg2 = Path("S:/") / "NOAA Ecosystem Project" / "UFS2ARCO" / "bfg_1994010100_fhr03_control"
 
     retval = skeleton.main(str(arg1), str(arg2))
     assert retval == 1  # expected fail
@@ -51,12 +46,7 @@ def test_skeleton_main_success():
     This test should succeed
     """
     arg1 = Path("test_files") / "s3_source_amsua_first_pass.yaml"
-    arg2 = (
-        Path("S:/")
-        / "NOAA Ecosystem Project"
-        / "UFS2ARCO"
-        / "bfg_1994010100_fhr03_control"
-    )
+    arg2 = Path("S:/") / "NOAA Ecosystem Project" / "UFS2ARCO" / "bfg_1994010100_fhr03_control"
 
     retval = skeleton.main(str(arg1), str(arg2))
     assert retval == 0
