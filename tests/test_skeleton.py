@@ -39,14 +39,15 @@ def test_skeleton_main_data_file_missing():
     retval = skeleton.main(str(arg1), str(arg2))
     assert retval == 1  # expected fail
 
-
-def test_skeleton_main_success():
-    """
-    This will exectute the main function in the UFS2ARCO skeleton.py file
-    This test should succeed
-    """
-    arg1 = Path("test_files") / "s3_source_amsua_first_pass.yaml"
-    arg2 = Path("S:/") / "NOAA Ecosystem Project" / "UFS2ARCO" / "bfg_1994010100_fhr03_control"
-
-    retval = skeleton.main(str(arg1), str(arg2))
-    assert retval == 0
+# KJW: Removing this test until we can place the data file (arg2) into a
+#  testable location for GitHub
+#def test_skeleton_main_success():
+#    """
+#    This will exectute the main function in the UFS2ARCO skeleton.py file
+#    This test should succeed
+#    """
+#    arg1 = Path("test_files") / "s3_source_amsua_first_pass.yaml"
+#    arg2 = Path("S:/") / "NOAA Ecosystem Project" / "UFS2ARCO" / "bfg_1994010100_fhr03_control"
+#
+#    retval = skeleton.main(str(arg1), str(arg2))
+#    assert retval == 0
